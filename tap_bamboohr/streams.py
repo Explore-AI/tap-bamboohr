@@ -40,6 +40,11 @@ class EmployeeDirectory(Stream):
     # Define sync function to get stream data
     def sync(self, *args, **kwargs):
         response = self.client.fetch_employee_directory()
+        print(response)
+        
 
 
-
+# Dictionary containing all streams available.
+STREAMS = {
+    "employees": EmployeeDirectory
+}
