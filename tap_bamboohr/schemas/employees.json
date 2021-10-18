@@ -1,0 +1,17 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+		"id": {
+			"type": ["null", "string"]
+		},
+		"displayName": {
+			"type": ["null", "string"]
+		},
+		"firstName": {
+			"type": ["null", "string"]
+		},
+		"lastName": {
+			"type": ["null", "string"]
+		}
+	}
+}

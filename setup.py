@@ -11,8 +11,11 @@ setup(
     py_modules=["tap_bamboohr"],
     install_requires=[
         # NB: Pin these to a more specific version for tap reliability
+        # Added wheel
+        "wheel",
         "singer-python",
-        "requests"
+        "requests",
+        "PyBambooHR"
     ],
     entry_points="""
     [console_scripts]

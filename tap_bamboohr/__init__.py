@@ -5,9 +5,10 @@ import singer
 from singer import utils, metadata
 from singer.catalog import Catalog, CatalogEntry
 from singer.schema import Schema
+from PyBambooHR import PyBambooHR
+# from singer.metadata import get_standard_metadata
 
-
-REQUIRED_CONFIG_KEYS = ["start_date", "username", "password"]
+REQUIRED_CONFIG_KEYS = ["start_date", "subdomain", "api_key"]
 LOGGER = singer.get_logger()
 
 
@@ -28,11 +29,22 @@ def load_schemas():
 
 def discover():
     raw_schemas = load_schemas()
+    print("doing discover")
     streams = []
     for stream_id, schema in raw_schemas.items():
         # TODO: populate any metadata and stream's key properties here..
-        stream_metadata = []
-        key_properties = []
+        # Need to add something here to get metadata - currently not working
+        print(stream_id)
+        print(schema)
+        stream_metadata = [{'selected': True}]
+        # stream_metadata = get_standard_metadata(schema="",
+        #                                         schema_name=stream_id,
+        #                                         key_properties=["id"],
+        #                                         valid_replication_keys=None,
+        #                                         replication_method=None)
+        
+        # Assign the stream key property - primary key
+        key_properties = ['id']
         streams.append(
             CatalogEntry(
                 tap_stream_id=stream_id,
@@ -49,29 +61,39 @@ def discover():
                 replication_method=None,
             )
         )
+    print(streams)
+    print(Catalog(streams))
     return Catalog(streams)
 
 
 def sync(config, state, catalog):
     """ Sync data from tap source """
     # Loop over selected streams in catalog
+    print('here 3')
     for stream in catalog.get_selected_streams(state):
+        print('here 4')
         LOGGER.info("Syncing stream:" + stream.tap_stream_id)
 
         bookmark_column = stream.replication_key
         is_sorted = True  # TODO: indicate whether data is sorted ascending on bookmark value
 
-        singer.write_schema(
-            stream_name=stream.tap_stream_id,
-            schema=stream.schema,
-            key_properties=stream.key_properties,
-        )
+        # singer.write_schema(
+        #     stream_name=stream.tap_stream_id,
+        #     schema=stream.schema,
+        #     key_properties=stream.key_properties,
+        # )
 
-        # TODO: delete and replace this inline function with your own data retrieval process:
-        tap_data = lambda: [{"id": x, "name": "row${x}"} for x in range(1000)]
+        # # TODO: delete and replace this inline function with your own data retrieval process:
+        # tap_data = lambda: [{"id": x, "name": "row${x}"} for x in range(1000)]
+
+        # Instantiate connection object using api_key and subdomain path
+        bamboo = PyBambooHR.PyBambooHR(subdomain=config["subdomain"], api_key=config["api_key"])
+        
+        # Retrieve json data of Employee Directory using method get_employee_directory()
+        tap_data = bamboo.get_employee_directory()
 
         max_bookmark = None
-        for row in tap_data():
+        for row in tap_data:
             # TODO: place type conversions or transformations here
 
             # write one or more rows to the stream:
@@ -92,9 +114,11 @@ def sync(config, state, catalog):
 def main():
     # Parse command line arguments
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
+    print("here 1")
 
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
+        print('here 2')
         catalog = discover()
         catalog.dump()
     # Otherwise run in sync mode

@@ -1,0 +1,60 @@
+here 1
+here 2
+doing discover
+employees
+{"properties": {"id": {"type": ["null", "string"]}, "displayName": {"type": ["null", "string"]}, "firstName": {"type": ["null", "string"]}, "lastName": {"type": ["null", "string"]}}, "type": ["null", "object"]}
+[<singer.catalog.CatalogEntry object at 0x7f4872f60fa0>]
+{'streams': [<singer.catalog.CatalogEntry object at 0x7f4872f60fa0>]}
+{
+  "streams": [
+    {
+      "tap_stream_id": "employees",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "employees",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
