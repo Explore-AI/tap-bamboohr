@@ -140,13 +140,15 @@
         {
           "metadata": {
             "inclusion": "available",
-            "table-key-properties": ["id"],
+            "table-key-properties": [
+              "id"
+            ],
             "selected": true,
             "schema-name": "employee"
           },
           "breadcrumb": []
         }
-        ]
+      ]
     }
   ]
 }
