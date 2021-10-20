@@ -2,13 +2,6 @@ import singer
 
 LOGGER = singer.get_logger()
 
-## For Employees_Directory
-# endpoint = https://api.bamboohr.com/api/gateway.php/{{CompanyDomain}}/v1/employees/directory
-# CompanyDomain = dcin42
-# no query paramaters
-# primary key = "id"
-# metadata  = ???
-
 class Stream:
     """Stream class to create streams source objects."""
 
@@ -37,11 +30,11 @@ class EmployeeDirectory(Stream):
     object_type = "EMPLOYEE_DIRECTORY"
     replication_method = "FULL_TABLE"
 
-    # Define sync function to get stream data
+    # Define sync function to get stream data per line
     def sync(self, *args, **kwargs):
-        response = self.client.fetch_employee_directory()
-        print(response)
-        
+        employeedirectory = self.client.fetch_employee_directory()
+        for employeed in employeedirectory:
+            yield employeed      
 
 
 # Dictionary containing all streams available.

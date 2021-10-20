@@ -17,7 +17,7 @@ def main():
     
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
-        print('here 2 - discover explicitly selcted')
+        print('here 2 - discover explicitly selected')
         catalog = discover()
         catalog.dump()
         print("discover complete")
