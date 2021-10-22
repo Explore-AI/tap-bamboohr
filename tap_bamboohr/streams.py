@@ -29,6 +29,8 @@ class EmployeeDirectory(Stream):
     key_properties = ["id"]
     object_type = "EMPLOYEE_DIRECTORY"
     replication_method = "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
 
     # Define sync function to get stream data per line
     def sync(self, *args, **kwargs):

@@ -13,22 +13,17 @@ LOGGER = singer.get_logger()
 def main():
     # Parse command line arguments
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
-    print("here 1")
     
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
-        print('here 2 - discover explicitly selected')
         catalog = discover()
         catalog.dump()
-        print("discover complete")
     # Otherwise run in sync mode
     else:
         if args.catalog:
             catalog = args.catalog
         else:
-            print("here 2.1 - discover forced")
             catalog = discover()
-            print("forced discover complete")
         sync(args.config, args.state, catalog)
 
 
