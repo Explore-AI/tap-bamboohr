@@ -16,3 +16,8 @@ class BamboohrClient:
         # Retrieve json data of Employee Directory using method get_employee_directory()
         tap_data = self._client.get_employee_directory()
         return tap_data
+
+    def fetch_whos_out(self):
+        # Retrieve json data of Whos Out using method get_whos_out()
+        tap_data = self._client.get_whos_out()
+        return tap_data

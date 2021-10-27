@@ -1,0 +1,23 @@
+{"type": "STATE", "value": {"currently_syncing": "whos_out"}}
+{"type": "SCHEMA", "stream": "whos_out", "schema": {}, "key_properties": ["employeeId"]}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1436, "type": "timeOff", "employeeId": 18, "name": "Javier Cruz", "start": "2021-10-23", "end": "2021-10-27"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1478, "type": "timeOff", "employeeId": 18, "name": "Javier Cruz", "start": "2021-10-24", "end": "2021-10-25"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1479, "type": "timeOff", "employeeId": 19, "name": "Shelly Cluff", "start": "2021-10-25", "end": "2021-10-26"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1480, "type": "timeOff", "employeeId": 4, "name": "Charlotte Abbott", "start": "2021-10-26", "end": "2021-10-27"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1481, "type": "timeOff", "employeeId": 5, "name": "Ashley Adams", "start": "2021-10-27", "end": "2021-10-28"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1482, "type": "timeOff", "employeeId": 6, "name": "Christina Agluinda", "start": "2021-10-28", "end": "2021-10-29"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1365, "type": "timeOff", "employeeId": 8, "name": "bam tap", "start": "2021-10-29", "end": "2021-11-02"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1483, "type": "timeOff", "employeeId": 7, "name": "Shannon Anderson", "start": "2021-10-29", "end": "2021-10-30"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1632, "type": "timeOff", "employeeId": 32, "name": "Carly Seymour", "start": "2021-10-29", "end": "2021-10-29"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1485, "type": "timeOff", "employeeId": 9, "name": "Jennifer Caldwell", "start": "2021-10-31", "end": "2021-11-01"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1486, "type": "timeOff", "employeeId": 10, "name": "Ryota Saito", "start": "2021-11-01", "end": "2021-11-02"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1487, "type": "timeOff", "employeeId": 11, "name": "Daniel Vance", "start": "2021-11-02", "end": "2021-11-03"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1488, "type": "timeOff", "employeeId": 12, "name": "Eric Asture", "start": "2021-11-03", "end": "2021-11-04"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1489, "type": "timeOff", "employeeId": 13, "name": "Cheryl Barnet", "start": "2021-11-04", "end": "2021-11-05"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1490, "type": "timeOff", "employeeId": 14, "name": "Maja Andev", "start": "2021-11-05", "end": "2021-11-06"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1491, "type": "timeOff", "employeeId": 15, "name": "Trent Walsh", "start": "2021-11-06", "end": "2021-11-07"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1492, "type": "timeOff", "employeeId": 16, "name": "Jake Bryan", "start": "2021-11-07", "end": "2021-11-08"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1493, "type": "timeOff", "employeeId": 17, "name": "Dorothy Chou", "start": "2021-11-08", "end": "2021-11-09"}}
+{"type": "RECORD", "stream": "whos_out", "record": {"id": 1633, "type": "timeOff", "employeeId": 35, "name": "Aaron Eckerly", "start": "2021-11-08", "end": "2021-11-08"}}
+{"type": "STATE", "value": {"currently_syncing": "whos_out", "bookmarks": {"whos_out": {}}}}
+{"type": "STATE", "value": {"currently_syncing": null, "bookmarks": {"whos_out": {}}}}
