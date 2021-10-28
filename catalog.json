@@ -139,10 +139,10 @@
             ],
             "forced-replication-method": "FULL_TABLE",
             "inclusion": "available",
-            "selected": true,
             "valid-replication-keys": [
               "id"
-            ]
+            ],
+            "selected": true
           }
         },
         {
@@ -383,10 +383,10 @@
             ],
             "forced-replication-method": "FULL_TABLE",
             "inclusion": "available",
-            "selected": true,
             "valid-replication-keys": [
               "employeeId"
-            ]
+            ],
+            "selected": true
           }
         },
         {
@@ -438,6 +438,108 @@
           "breadcrumb": [
             "properties",
             "end"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "time_off_policies",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timeOffTypeId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "effectiveDate": {
+            "type": [
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "time_off_policies",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "timeOffTypeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "effectiveDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
           ],
           "metadata": {
             "inclusion": "available"

@@ -1,0 +1,37 @@
+{
+    "type": [
+        "null",
+        "object"
+    ],
+    "properties": {
+        "id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "timeOffTypeId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "effectiveDate": {
+            "type": [
+                "null"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

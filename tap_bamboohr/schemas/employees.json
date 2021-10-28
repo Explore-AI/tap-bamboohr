@@ -1,128 +1,127 @@
 {
 	"type": [
-	  "null",
-	  "object"
+		"null",
+		"object"
 	],
 	"properties": {
-	  "id": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "displayName": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "firstName": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "lastName": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "preferredName": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "jobTitle": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "workPhone": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "mobilePhone": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "workEmail": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "department": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "location": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "division": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "linkedIn": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "instagram": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "pronouns": {
-		"type": [
-		  "null"
-		]
-	  },
-	  "workPhoneExtension": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "supervisor": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "photoUploaded": {
-		"type": [
-		  "null",
-		  "boolean"
-		]
-	  },
-	  "photoUrl": {
-		"type": [
-		  "null",
-		  "string"
-		]
-	  },
-	  "canUploadPhoto": {
-		"type": [
-		  "null",
-		  "integer"
-		]
-	  }
+		"id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"displayName": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"firstName": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"lastName": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"preferredName": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"jobTitle": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"workPhone": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"mobilePhone": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"workEmail": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"department": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"location": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"division": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"linkedIn": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"instagram": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"pronouns": {
+			"type": [
+				"null"
+			]
+		},
+		"workPhoneExtension": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"supervisor": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"photoUploaded": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"photoUrl": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"canUploadPhoto": {
+			"type": [
+				"null",
+				"integer"
+			]
+		}
 	}
-  }
-  
+}

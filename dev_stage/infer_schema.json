@@ -7,19 +7,13 @@
     "id": {
       "type": [
         "null",
-        "integer"
-      ]
-    },
-    "type": {
-      "type": [
-        "null",
         "string"
       ]
     },
-    "employeeId": {
+    "timeOffTypeId": {
       "type": [
         "null",
-        "integer"
+        "string"
       ]
     },
     "name": {
@@ -28,13 +22,12 @@
         "string"
       ]
     },
-    "start": {
+    "effectiveDate": {
       "type": [
-        "null",
-        "string"
+        "null"
       ]
     },
-    "end": {
+    "type": {
       "type": [
         "null",
         "string"

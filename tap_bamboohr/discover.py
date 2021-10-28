@@ -38,6 +38,10 @@ def _get_schemas_meta():
         
         if stream_object.replication_key:
             meta = metadata.write(meta, ("properties", stream_object.replication_key), "inclusion", "automatic")
+        
+        # Add metadata for stream selection - default is false
+        if stream_object.selected ==  False:
+            meta = metadata.write(meta, (), "selected", stream_object.selected)
 
         meta = metadata.to_list(meta)
 

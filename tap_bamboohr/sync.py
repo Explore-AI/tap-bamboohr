@@ -2,7 +2,7 @@ import singer
 from singer.schema import Schema
 
 # Import client script from current directory
-from .client import BamboohrClient
+from .client import Client
 # Import streams script from current directory
 from .streams import STREAMS
 
@@ -16,7 +16,7 @@ def sync(config, state, catalog):
     """
 
     # Call client script file to create client to submit request for data to source BambooHR
-    client = BamboohrClient(api_key=config["api_key"], subdomain=config["subdomain"])
+    client = Client(api_key=config["api_key"], subdomain=config["subdomain"])
  
     # Singer tool - Applies schema (and integer_datetime_fmt, if supplied) to data, transforming
     # each field in data to the type specified in schema. If no type matches a

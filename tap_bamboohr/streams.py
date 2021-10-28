@@ -30,6 +30,7 @@ class EmployeeDirectory(Stream):
     replication_method = "FULL_TABLE"
     valid_replication_keys = ["id"]
     replication_key = "id"
+    selected = False
 
     # Define sync function to get stream data per line
     def sync(self, *args, **kwargs):
@@ -49,6 +50,7 @@ class WhosOut(Stream):
     replication_method = "FULL_TABLE"
     valid_replication_keys = ["employeeId"]
     replication_key = "employeeId"
+    selected = False
 
     # Define sync function to get stream data per line
     def sync(self, *args, **kwargs):
@@ -57,8 +59,29 @@ class WhosOut(Stream):
             yield who_out
 
 
+class TimeOffPolicies(Stream):
+    """Create class for stream TimeOffPolicies from source
+    that inherits from Stream class"""
+
+    # Set variable name for stream - modify here if required
+    stream_id = "time_off_policies"
+    key_properties = ["id"]
+    object_type = "TIME_OFF_POLICIES"
+    replication_method = "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        time_off_policies = self.client.fetch_time_off_policies()
+        for time_off_policiy in time_off_policies:
+            yield time_off_policiy           
+
+
 # Dictionary containing all streams available.
 STREAMS = {
     "employees": EmployeeDirectory,
-    "whos_out": WhosOut
+    "whos_out": WhosOut,
+    "time_off_policies": TimeOffPolicies
 }
