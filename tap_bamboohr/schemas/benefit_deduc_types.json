@@ -1,0 +1,191 @@
+{
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "id": {
+        "type": [
+          "null",
+          "string",
+          "integer"
+        ]
+      },
+      "deductionTypeName": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "defaultDeductionCode": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "allowableBenefitTypes": {
+        "type": [
+          "null",
+          "array"
+        ],
+        "items": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "nonBenefitDeductionType": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      "canBeCollectedByTrax": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      "additionalDescription": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "hideAnnualMax": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      "managedDeductionType": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "subTypes": {
+        "type": [
+          "null",
+          "array"
+        ],
+        "items": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "deductionTypeName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "defaultDeductionCode": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "nonBenefitDeductionType": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "canBeCollectedByTrax": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "additionalDescription": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "hideAnnualMax": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "managedDeductionType": {
+              "type": [
+                "null"
+              ]
+            },
+            "subTypeText": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "deductionNote": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "deductionNoteLink": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "deductionNoteLinkText": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "allowableBenefitTypes": {
+              "type": [
+                "null",
+                "array"
+              ],
+              "items": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "subTypeText": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "deductionNote": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "deductionNoteLink": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "deductionNoteLinkText": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    }
+  }
+  

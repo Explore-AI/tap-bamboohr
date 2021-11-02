@@ -142,7 +142,7 @@
             "valid-replication-keys": [
               "id"
             ],
-            "selected": true
+            "selected": false
           }
         },
         {
@@ -328,6 +328,35 @@
       ]
     },
     {
+      "tap_stream_id": "employee",
+      "schema": {},
+      "stream": "employee",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        }
+      ]
+    },
+    {
       "tap_stream_id": "whos_out",
       "schema": {
         "properties": {
@@ -386,7 +415,7 @@
             "valid-replication-keys": [
               "employeeId"
             ],
-            "selected": true
+            "selected": false
           }
         },
         {
@@ -446,6 +475,110 @@
       ]
     },
     {
+      "tap_stream_id": "meta_fields",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string",
+              "integer"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "alias": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "deprecated": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "meta_fields",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "alias"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deprecated"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
       "tap_stream_id": "time_off_policies",
       "schema": {
         "properties": {
@@ -497,7 +630,7 @@
             "valid-replication-keys": [
               "id"
             ],
-            "selected": true
+            "selected": false
           }
         },
         {
@@ -543,6 +676,1233 @@
           ],
           "metadata": {
             "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "benefit_deduc_types",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string",
+              "integer"
+            ]
+          },
+          "deductionTypeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "defaultDeductionCode": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "allowableBenefitTypes": {
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "nonBenefitDeductionType": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "canBeCollectedByTrax": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "additionalDescription": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "hideAnnualMax": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "managedDeductionType": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "subTypes": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "deductionTypeName": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "defaultDeductionCode": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "nonBenefitDeductionType": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "canBeCollectedByTrax": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "additionalDescription": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "hideAnnualMax": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "managedDeductionType": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "subTypeText": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "deductionNote": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "deductionNoteLink": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "deductionNoteLinkText": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "allowableBenefitTypes": {
+                  "items": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "type": [
+                    "null",
+                    "array"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "subTypeText": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "deductionNote": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "deductionNoteLink": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "deductionNoteLinkText": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "benefit_deduc_types",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deductionTypeName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "defaultDeductionCode"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "allowableBenefitTypes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "nonBenefitDeductionType"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "canBeCollectedByTrax"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "additionalDescription"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "hideAnnualMax"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "managedDeductionType"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subTypes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subTypeText"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deductionNote"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deductionNoteLink"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deductionNoteLinkText"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "benefit_coverages",
+      "schema": {
+        "properties": {
+          "Benefit Coverages": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "shortName": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "description": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "sortOrder": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "benefitPlanId": {
+                  "type": [
+                    "null"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "benefit_coverages",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Benefit Coverages"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "training_types",
+      "schema": {
+        "properties": {
+          "21": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "category": {
+                "properties": {
+                  "id": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "16": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "dueFromHireDate": {
+                "properties": {
+                  "unit": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "amount": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "17": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "18": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "20": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "dueFromHireDate": {
+                "properties": {
+                  "unit": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "amount": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "category": {
+                "properties": {
+                  "id": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "15": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "dueFromHireDate": {
+                "properties": {
+                  "unit": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "amount": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "14": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "dueFromHireDate": {
+                "properties": {
+                  "unit": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "amount": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "19": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "renewable": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "frequency": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "dueFromHireDate": {
+                "properties": {
+                  "unit": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "amount": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "category": {
+                "properties": {
+                  "id": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "fieldId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "linkUrl": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "training_types",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "21"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "16"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "17"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "18"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "20"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "15"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "14"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "19"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "training_categories",
+      "schema": {
+        "properties": {
+          "18356": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "18353": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "training_categories",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "18356"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "18353"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
           }
         }
       ]

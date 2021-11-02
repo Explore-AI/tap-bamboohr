@@ -1,18 +1,5 @@
-{"type": "STATE", "value": {"currently_syncing": "time_off_policies"}}
-{"type": "SCHEMA", "stream": "time_off_policies", "schema": {}, "key_properties": ["id"]}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "70", "timeOffTypeId": "77", "name": "BambooHR Manual Policy", "effectiveDate": null, "type": "manual"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "72", "timeOffTypeId": "78", "name": "BambooHR Manual Policy", "effectiveDate": null, "type": "manual"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "74", "timeOffTypeId": "79", "name": "BambooHR Manual Policy", "effectiveDate": null, "type": "manual"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "76", "timeOffTypeId": "80", "name": "BambooHR Manual Policy", "effectiveDate": null, "type": "manual"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "78", "timeOffTypeId": "81", "name": "BambooHR Manual Policy", "effectiveDate": null, "type": "manual"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "82", "timeOffTypeId": "82", "name": "BambooHR Manual Policy", "effectiveDate": null, "type": "manual"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "71", "timeOffTypeId": "77", "name": "BambooHR Unlimited Policy", "effectiveDate": null, "type": "discretionary"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "73", "timeOffTypeId": "78", "name": "BambooHR Unlimited Policy", "effectiveDate": null, "type": "discretionary"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "75", "timeOffTypeId": "79", "name": "BambooHR Unlimited Policy", "effectiveDate": null, "type": "discretionary"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "77", "timeOffTypeId": "80", "name": "BambooHR Unlimited Policy", "effectiveDate": null, "type": "discretionary"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "79", "timeOffTypeId": "81", "name": "BambooHR Unlimited Policy", "effectiveDate": null, "type": "discretionary"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "83", "timeOffTypeId": "82", "name": "BambooHR Unlimited Policy", "effectiveDate": null, "type": "discretionary"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "80", "timeOffTypeId": "79", "name": "Sick Full-Time", "effectiveDate": null, "type": "accruing"}}
-{"type": "RECORD", "stream": "time_off_policies", "record": {"id": "81", "timeOffTypeId": "78", "name": "Vacation Full-Time", "effectiveDate": null, "type": "accruing"}}
-{"type": "STATE", "value": {"currently_syncing": "time_off_policies", "bookmarks": {"time_off_policies": {}}}}
-{"type": "STATE", "value": {"currently_syncing": null, "bookmarks": {"time_off_policies": {}}}}
+{"type": "STATE", "value": {"currently_syncing": "benefit_coverages"}}
+{"type": "SCHEMA", "stream": "benefit_coverages", "schema": {}, "key_properties": ["id"]}
+{"type": "RECORD", "stream": "benefit_coverages", "record": {"Benefit Coverages": [{"id": "1", "shortName": "Employee", "description": null, "sortOrder": "10", "benefitPlanId": null}, {"id": "7", "shortName": "Family Only", "description": "Employee not included", "sortOrder": "20", "benefitPlanId": null}, {"id": "6", "shortName": "Two Party", "description": null, "sortOrder": "30", "benefitPlanId": null}, {"id": "2", "shortName": "Employee + Spouse", "description": null, "sortOrder": "40", "benefitPlanId": null}, {"id": "4", "shortName": "Employee + Child", "description": null, "sortOrder": "50", "benefitPlanId": null}, {"id": "5", "shortName": "Employee + Children", "description": null, "sortOrder": "60", "benefitPlanId": null}, {"id": "3", "shortName": "Employee + Family", "description": null, "sortOrder": "70", "benefitPlanId": null}]}}
+{"type": "STATE", "value": {"currently_syncing": "benefit_coverages", "bookmarks": {"benefit_coverages": {}}}}
+{"type": "STATE", "value": {"currently_syncing": null, "bookmarks": {"benefit_coverages": {}}}}

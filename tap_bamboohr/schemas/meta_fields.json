@@ -1,0 +1,40 @@
+{
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "id": {
+        "type": [
+          "null",
+          "string",
+          "integer"
+        ]
+      },
+      "name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "type": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "alias": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "deprecated": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      }
+    }
+  }
+  

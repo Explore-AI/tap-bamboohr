@@ -1,15 +1,10 @@
 {
-  "type": [
-    "null",
-    "object"
-  ],
-  "properties": {
-    "Benefit Coverages": {
-      "type": [
-        "null",
-        "array"
-      ],
-      "items": {
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "18356": {
         "type": [
           "null",
           "object"
@@ -21,31 +16,34 @@
               "string"
             ]
           },
-          "shortName": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "18353": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "id": {
             "type": [
               "null",
               "string"
             ]
           },
-          "description": {
+          "name": {
             "type": [
               "null",
               "string"
-            ]
-          },
-          "sortOrder": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "benefitPlanId": {
-            "type": [
-              "null"
             ]
           }
         }
       }
     }
   }
-}
+  

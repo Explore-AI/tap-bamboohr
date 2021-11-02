@@ -28,7 +28,6 @@ def sync(config, state, catalog):
             replication_key = stream_obj.replication_key
             stream_schema = stream.schema.to_dict()
             stream_metadata = metadata.to_map(stream.metadata)
-            # print("5", stream_metadata[()]["selected"])
 
             LOGGER.info("Syncing stream:" + stream.tap_stream_id)
 
