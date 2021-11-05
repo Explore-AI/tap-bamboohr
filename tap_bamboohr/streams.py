@@ -181,6 +181,66 @@ class BenCoverages(Stream):
         #     yield ben_coverage
 
 
+class EmployeeDependents(Stream):
+    """Create class for stream Employee Dependents from source
+    that inherits from Stream class"""
+    
+    # Set variable name for stream - modify here if required
+    stream_id = "employee_dependents"
+    key_properties = ["id"]
+    object_type = "EMPL_DEPEND"
+    replication_method = "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        empl_depends = self.client.fetch_empl_dependents()
+        for empl_depend in empl_depends["Employee Dependents"]:
+            yield empl_depend
+
+
+class BenefitPlans(Stream):
+    """Create class for stream Benefit Plans from source
+    that inherits from Stream class"""
+
+    # Set variable name for stream - modify here if required
+    stream_id = "benefit_plans"
+    key_properties = ["id"]
+    object_type = "BEN_PLANS"
+    replication_method =  "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        benefit_plans = self.client.fetch_benefit_plans()
+        for benefit_plan in benefit_plans["Benefit Plans"]:
+            yield benefit_plan
+
+
+class BenefitGroups(Stream):
+    """Create class for stream Benefit Groups from source
+    that inherits from Stream class"""
+
+    # Set variable name for stream - modify here if required
+    stream_id = "benefit_groups"
+    key_properties = ["id"]
+    object_type = "BEN_GROUPS"
+    replication_method =  "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        benefit_groups = self.client.fetch_benefit_groups()
+        for benefit_group in benefit_groups["Benefit Groups"]:
+            yield benefit_group
+
+
 class TrainingTypes(Stream):
     """Create class for stream Training Types from source
     that inherits from Stream class"""
@@ -234,6 +294,9 @@ STREAMS = {
     "time_off_policies": TimeOffPolicies,
     "benefit_deduc_types": BenDedTypes,
     "benefit_coverages": BenCoverages,
+    "employee_dependents": EmployeeDependents,
+    "benefit_plans": BenefitPlans,
+    "benefit_groups": BenefitGroups,
     "training_types": TrainingTypes,
     "training_categories": TrainingCategories
 }

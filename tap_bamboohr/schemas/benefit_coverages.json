@@ -1,52 +1,51 @@
 {
-    "type": [
-      "null",
-      "object"
-    ],
-    "properties": {
-      "Benefit Coverages": {
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "Benefit Coverages": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
         "type": [
           "null",
-          "array"
+          "object"
         ],
-        "items": {
-          "type": [
-            "null",
-            "object"
-          ],
-          "properties": {
-            "id": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "shortName": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "description": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "sortOrder": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "benefitPlanId": {
-              "type": [
-                "null"
-              ]
-            }
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "shortName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sortOrder": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitPlanId": {
+            "type": [
+              "null"
+            ]
           }
         }
       }
     }
   }
-  
+}

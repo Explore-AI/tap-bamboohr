@@ -1,5 +1,13 @@
-{"type": "STATE", "value": {"currently_syncing": "benefit_coverages"}}
-{"type": "SCHEMA", "stream": "benefit_coverages", "schema": {}, "key_properties": ["id"]}
-{"type": "RECORD", "stream": "benefit_coverages", "record": {"Benefit Coverages": [{"id": "1", "shortName": "Employee", "description": null, "sortOrder": "10", "benefitPlanId": null}, {"id": "7", "shortName": "Family Only", "description": "Employee not included", "sortOrder": "20", "benefitPlanId": null}, {"id": "6", "shortName": "Two Party", "description": null, "sortOrder": "30", "benefitPlanId": null}, {"id": "2", "shortName": "Employee + Spouse", "description": null, "sortOrder": "40", "benefitPlanId": null}, {"id": "4", "shortName": "Employee + Child", "description": null, "sortOrder": "50", "benefitPlanId": null}, {"id": "5", "shortName": "Employee + Children", "description": null, "sortOrder": "60", "benefitPlanId": null}, {"id": "3", "shortName": "Employee + Family", "description": null, "sortOrder": "70", "benefitPlanId": null}]}}
-{"type": "STATE", "value": {"currently_syncing": "benefit_coverages", "bookmarks": {"benefit_coverages": {}}}}
-{"type": "STATE", "value": {"currently_syncing": null, "bookmarks": {"benefit_coverages": {}}}}
+{"type": "STATE", "value": {"currently_syncing": "benefit_groups"}}
+{"type": "SCHEMA", "stream": "benefit_groups", "schema": {}, "key_properties": ["id"]}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "7", "name": "UT Salary", "payPeriod": "semi-monthly", "startDate": "2021-07-08", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "8", "name": "UT Hourly", "payPeriod": "bi-weekly", "startDate": "2021-07-08", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "9", "name": "UK Salary", "payPeriod": "semi-monthly", "startDate": "2021-07-08", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "10", "name": "Australia Salary", "payPeriod": "semi-monthly", "startDate": "2021-07-08", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "11", "name": "Canada Salary", "payPeriod": "semi-monthly", "startDate": "2021-07-08", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "12", "name": "Canada Salary - copy", "payPeriod": "semi-monthly", "startDate": "2021-07-08", "endDate": "2021-07-09", "archived": true}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "13", "name": "UK Hourly", "payPeriod": "bi-weekly", "startDate": "2021-07-09", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "14", "name": "Australia Hourly", "payPeriod": "bi-weekly", "startDate": "2021-07-09", "endDate": null, "archived": false}}
+{"type": "RECORD", "stream": "benefit_groups", "record": {"id": "15", "name": "Canada Hourly", "payPeriod": "bi-weekly", "startDate": "2021-07-09", "endDate": null, "archived": false}}
+{"type": "STATE", "value": {"currently_syncing": "benefit_groups", "bookmarks": {"benefit_groups": {}}}}
+{"type": "STATE", "value": {"currently_syncing": null, "bookmarks": {"benefit_groups": {}}}}

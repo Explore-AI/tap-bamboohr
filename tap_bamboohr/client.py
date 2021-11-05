@@ -1,4 +1,6 @@
 import json
+
+from requests.api import head
 from PyBambooHR import PyBambooHR
 import requests
 
@@ -180,6 +182,63 @@ class Client():
     def fetch_benefit_coverages(self):
         # Retrieve json data of Benefit Deduction Types using method get_benefit_coverages()
         tap_data = self.get_benefit_coverages()
+        return tap_data
+
+    def get_empl_dependents(self):
+        """
+        API method for returning a list of all employee dependents
+        "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/employeedependents"
+        """
+        # Set variables for stream API endpoint
+        url = self.base_url + "employeedependents"
+        self.headers.update(self.data_type)
+
+        r = requests.get(url, timeout=self.timeout, headers=self.headers, auth=(self._api_key, ""))
+        r.raise_for_status()
+        data = r.json()
+        return data
+
+    def fetch_empl_dependents(self):
+        # Retrieve json data of Employee Dependents using method get_empl_dependents()
+        tap_data = self.get_empl_dependents()
+        return tap_data 
+
+    def get_benefit_plans(self):
+        """
+        API method for returning a list of all benefit plans
+        "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/benefitplans"
+        """
+        # Set variables for stream API endpoint
+        url = self.base_url + "benefitplans"
+        self.headers.update(self.data_type)
+
+        r = requests.get(url, timeout=self.timeout, headers=self.headers, auth=(self._api_key, ""))
+        r.raise_for_status()
+        data = r.json()
+        return data
+
+    def fetch_benefit_plans(self):
+        # Retrieve json data of Benefits Plans using method get_benefit_plans()
+        tap_data = self.get_benefit_plans()
+        return tap_data
+
+    def get_benefit_groups(self):
+        """
+        API method for returning a list of all benefit groups
+        "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/benefitgroups"
+        """
+        # Set variables for stream API endpoint
+        url = self.base_url + "benefitgroups"
+        self.headers.update(self.data_type)
+
+        r = requests.get(url, timeout=self.timeout, headers=self.headers, auth=(self._api_key, ""))
+        r.raise_for_status()
+        data = r.json()
+        return data
+
+    def fetch_benefit_groups(self):
+        # Retrieve json data of Benefits Groups using method get_benefit_groups()
+        tap_data = self.get_benefit_groups()
         return tap_data
 
     def get_training_types(self):

@@ -1,0 +1,78 @@
+{
+    "type": [
+        "null",
+        "object"
+    ],
+    "properties": {
+        "id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "deductionTypeId": {
+            "type": [
+                "null"
+            ]
+        },
+        "startDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "endDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "url": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "meetAcaMin": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "minEssentialCoverage": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "safeHarbor": {
+            "type": [
+                "null"
+            ]
+        },
+        "archived": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        }
+    }
+}
