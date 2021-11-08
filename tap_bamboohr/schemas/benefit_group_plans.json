@@ -1,0 +1,63 @@
+{
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "benefitGroupId": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "benefitPlanId": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "eligibility": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "waitPeriod": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "waitPeriodType": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "startDate": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "endDate": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "archived": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      }
+    }
+  }
+  

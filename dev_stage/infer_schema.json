@@ -10,34 +10,27 @@
         "string"
       ]
     },
-    "name": {
+    "shortName": {
       "type": [
         "null",
         "string"
       ]
     },
-    "payPeriod": {
+    "description": {
       "type": [
         "null",
         "string"
       ]
     },
-    "startDate": {
+    "sortOrder": {
       "type": [
         "null",
         "string"
       ]
     },
-    "endDate": {
+    "benefitPlanId": {
       "type": [
-        "null",
-        "string"
-      ]
-    },
-    "archived": {
-      "type": [
-        "null",
-        "boolean"
+        "null"
       ]
     }
   }

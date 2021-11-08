@@ -10,27 +10,46 @@
           "string"
         ]
       },
-      "shortName": {
+      "benefitGroupPlanId": {
         "type": [
           "null",
           "string"
         ]
       },
-      "description": {
+      "benefitPlanCoverageId": {
         "type": [
           "null",
           "string"
         ]
       },
-      "sortOrder": {
+      "employeeCost": {
         "type": [
           "null",
           "string"
         ]
       },
-      "benefitPlanId": {
+      "companyCost": {
         "type": [
-          "null"
+          "null",
+          "string"
+        ]
+      },
+      "startDate": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "endDate": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "archived": {
+        "type": [
+          "null",
+          "boolean"
         ]
       }
     }

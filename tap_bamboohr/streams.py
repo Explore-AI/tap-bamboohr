@@ -173,12 +173,10 @@ class BenCoverages(Stream):
     selected = False
 
     # Define sync function to get stream data per line
-    ## FIX nested json response
     def sync(self, *args, **kwargs):
         ben_coverages = self.client.fetch_benefit_coverages()
-        yield ben_coverages
-        # for ben_coverage in ben_coverages:
-        #     yield ben_coverage
+        for ben_coverage in ben_coverages["Benefit Coverages"]:
+            yield ben_coverage
 
 
 class EmployeeDependents(Stream):
@@ -241,6 +239,66 @@ class BenefitGroups(Stream):
             yield benefit_group
 
 
+class BenGroupEmpls(Stream):
+    """Create class for stream Benefit Group Employees from source
+    that inherits from Stream class"""
+
+    # Set variable name for stream - modify here if required
+    stream_id = "benefit_group_employees"
+    key_properties = ["id"]
+    object_type = "BEN_GROUP_EMPLS"
+    replication_method =  "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        benefit_group_empls = self.client.fetch_benefit_group_empls()
+        for benefit_group_empl in benefit_group_empls["Benefit Group Employees"]:
+            yield benefit_group_empl
+
+
+class BenGroupPlans(Stream):
+    """Create class for stream Benefit Group Plans from source
+    that inherits from Stream class"""
+
+    # Set variable name for stream - modify here if required
+    stream_id = "benefit_group_plans"
+    key_properties = ["id"]
+    object_type = "BEN_GROUP_PLANS"
+    replication_method =  "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        benefit_group_plans = self.client.fetch_benefit_group_plans()
+        for benefit_group_plan in benefit_group_plans["Benefit Group Plans"]:
+            yield benefit_group_plan
+
+
+class BenefitCosts(Stream):
+    """Create class for stream Benefit Group Plan Costs from source
+    that inherits from Stream class"""
+
+    # Set variable name for stream - modify here if required
+    stream_id = "benefit_group_plan_costs"
+    key_properties = ["id"]
+    object_type = "BEN_GROUP_PLAN_COSTS"
+    replication_method =  "FULL_TABLE"
+    valid_replication_keys = ["id"]
+    replication_key = "id"
+    selected = False
+
+    # Define sync function to get stream data per line
+    def sync(self, *args, **kwargs):
+        benefit_costs = self.client.fetch_benefit_costs()
+        for benefit_cost in benefit_costs["Benefit Group Plan Costs"]:
+            yield benefit_cost
+
+
 class TrainingTypes(Stream):
     """Create class for stream Training Types from source
     that inherits from Stream class"""
@@ -287,7 +345,7 @@ class TrainingCategories(Stream):
 
 # Dictionary containing all streams available.
 STREAMS = {
-    "employees": EmployeeDirectory,
+    "employee_directory": EmployeeDirectory,
     "employee" : Employee,
     "whos_out": WhosOut,
     "meta_fields": MetaFields,
@@ -297,6 +355,9 @@ STREAMS = {
     "employee_dependents": EmployeeDependents,
     "benefit_plans": BenefitPlans,
     "benefit_groups": BenefitGroups,
+    "benefit_group_empls": BenGroupEmpls,
+    "benefit_group_plans": BenGroupPlans,
+    "benefit_costs": BenefitCosts,
     "training_types": TrainingTypes,
     "training_categories": TrainingCategories
 }

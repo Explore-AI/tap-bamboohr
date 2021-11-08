@@ -1,7 +1,7 @@
 {
   "streams": [
     {
-      "tap_stream_id": "employees",
+      "tap_stream_id": "employee_directory",
       "schema": {
         "properties": {
           "id": {
@@ -129,7 +129,7 @@
           "object"
         ]
       },
-      "stream": "employees",
+      "stream": "employee_directory",
       "metadata": [
         {
           "breadcrumb": [],
@@ -1020,47 +1020,33 @@
       "tap_stream_id": "benefit_coverages",
       "schema": {
         "properties": {
-          "Benefit Coverages": {
-            "items": {
-              "properties": {
-                "id": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "shortName": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "description": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "sortOrder": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "benefitPlanId": {
-                  "type": [
-                    "null"
-                  ]
-                }
-              },
-              "type": [
-                "null",
-                "object"
-              ]
-            },
+          "id": {
             "type": [
               "null",
-              "array"
+              "string"
+            ]
+          },
+          "shortName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sortOrder": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitPlanId": {
+            "type": [
+              "null"
             ]
           }
         },
@@ -1088,7 +1074,16 @@
         {
           "breadcrumb": [
             "properties",
-            "Benefit Coverages"
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shortName"
           ],
           "metadata": {
             "inclusion": "available"
@@ -1097,10 +1092,28 @@
         {
           "breadcrumb": [
             "properties",
-            "id"
+            "description"
           ],
           "metadata": {
-            "inclusion": "automatic"
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sortOrder"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "benefitPlanId"
+          ],
+          "metadata": {
+            "inclusion": "available"
           }
         }
       ]
@@ -1708,6 +1721,435 @@
           "breadcrumb": [
             "properties",
             "payPeriod"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "archived"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "benefit_group_empls",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitGroupId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "employeeId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "startDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archived": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "benefit_group_empls",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "benefitGroupId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "employeeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "archived"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "benefit_group_plans",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitGroupId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitPlanId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "eligibility": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "waitPeriod": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "waitPeriodType": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "startDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archived": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "benefit_group_plans",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "benefitGroupId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "benefitPlanId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "eligibility"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "waitPeriod"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "waitPeriodType"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "archived"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "benefit_costs",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitGroupPlanId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "benefitPlanCoverageId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "employeeCost": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "companyCost": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "startDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archived": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "benefit_costs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "valid-replication-keys": [
+              "id"
+            ],
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "benefitGroupPlanId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "benefitPlanCoverageId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "employeeCost"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "companyCost"
           ],
           "metadata": {
             "inclusion": "available"

@@ -167,7 +167,7 @@ class Client():
 
     def get_benefit_coverages(self):
         """
-        API method for returning a list of benefit deduction types
+        API method for returning a list of benefit coverages
         "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/benefitcoverages"
         """
         # Set variables for stream API endpoint
@@ -180,7 +180,7 @@ class Client():
         return data
 
     def fetch_benefit_coverages(self):
-        # Retrieve json data of Benefit Deduction Types using method get_benefit_coverages()
+        # Retrieve json data of Benefit Coverages using method get_benefit_coverages()
         tap_data = self.get_benefit_coverages()
         return tap_data
 
@@ -239,6 +239,63 @@ class Client():
     def fetch_benefit_groups(self):
         # Retrieve json data of Benefits Groups using method get_benefit_groups()
         tap_data = self.get_benefit_groups()
+        return tap_data
+
+    def get_benefit_group_empls(self):
+        """
+        API method for returning a list of all benefit group employees
+        "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/benefitgroupemployees"
+        """
+        # Set variables for stream API endpoint
+        url = self.base_url + "benefitgroupemployees"
+        self.headers.update(self.data_type)
+
+        r = requests.get(url, timeout=self.timeout, headers=self.headers, auth=(self._api_key, ""))
+        r.raise_for_status()
+        data = r.json()
+        return data
+
+    def fetch_benefit_group_empls(self):
+        # Retrieve json data of Benefit Group Employees using method get_benefit_group_empls()
+        tap_data = self.get_benefit_group_empls()
+        return tap_data
+
+    def get_benefit_group_plans(self):
+        """
+        API method for returning a list of all benefit group plans
+        "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/benefitgroupplans"
+        """
+        # Set variables for stream API endpoint
+        url = self.base_url + "benefitgroupplans"
+        self.headers.update(self.data_type)
+
+        r = requests.get(url, timeout=self.timeout, headers=self.headers, auth=(self._api_key, ""))
+        r.raise_for_status()
+        data = r.json()
+        return data
+
+    def fetch_benefit_group_plans(self):
+        # Retrieve json data of Benefit Group Plans using method get_benefit_group_plans()
+        tap_data = self.get_benefit_group_plans()
+        return tap_data
+
+    def get_benefit_costs(self):
+        """
+        API method for returning a list of all benefit group plan costs
+        "https://api.bamboohr.com/api/gateway.php/companyDomain/v1/benefitgroupplancosts"
+        """
+        # Set variables for stream API endpoint
+        url = self.base_url + "benefitgroupplancosts"
+        self.headers.update(self.data_type)
+
+        r = requests.get(url, timeout=self.timeout, headers=self.headers, auth=(self._api_key, ""))
+        r.raise_for_status()
+        data = r.json()
+        return data
+
+    def fetch_benefit_costs(self):
+        # Retrieve json data of Benefit Group Plan Costs using method get_benefit_costs()
+        tap_data = self.get_benefit_costs()
         return tap_data
 
     def get_training_types(self):
