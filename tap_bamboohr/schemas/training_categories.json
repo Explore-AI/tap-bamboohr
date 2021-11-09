@@ -4,45 +4,17 @@
     "object"
   ],
   "properties": {
-    "18356": {
+    "id": {
       "type": [
         "null",
-        "object"
-      ],
-      "properties": {
-        "id": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "name": {
-          "type": [
-            "null",
-            "string"
-          ]
-        }
-      }
+        "string"
+      ]
     },
-    "18353": {
+    "name": {
       "type": [
         "null",
-        "object"
-      ],
-      "properties": {
-        "id": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "name": {
-          "type": [
-            "null",
-            "string"
-          ]
-        }
-      }
+        "string"
+      ]
     }
   }
 }

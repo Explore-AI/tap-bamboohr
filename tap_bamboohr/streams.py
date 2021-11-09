@@ -316,9 +316,9 @@ class TrainingTypes(Stream):
     ## FIX nested json response
     def sync(self, *args, **kwargs):
         training_types = self.client.fetch_training_types()
-        yield training_types
-        # for training_type in training_types:
-        #     yield training_type.value()
+        # yield training_types
+        for key, training_type in training_types.items():
+            yield training_type
 
 
 class TrainingCategories(Stream):
@@ -338,9 +338,9 @@ class TrainingCategories(Stream):
     ## FIX nested json response
     def sync(self, *args, **kwargs):
         training_cats = self.client.fetch_training_categories()
-        yield training_cats
-        # for training_cat in training_cats:
-        #     yield training_cat
+        # yield training_cats
+        for key, training_cat in training_cats.items():
+            yield training_cat
     
 
 # Dictionary containing all streams available.

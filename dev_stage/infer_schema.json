@@ -10,27 +10,10 @@
         "string"
       ]
     },
-    "shortName": {
+    "name": {
       "type": [
         "null",
         "string"
-      ]
-    },
-    "description": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "sortOrder": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "benefitPlanId": {
-      "type": [
-        "null"
       ]
     }
   }

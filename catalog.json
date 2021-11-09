@@ -528,7 +528,7 @@
             "valid-replication-keys": [
               "id"
             ],
-            "selected": false
+            "selected": true
           }
         },
         {
@@ -2188,7 +2188,38 @@
       "tap_stream_id": "training_types",
       "schema": {
         "properties": {
-          "21": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "renewable": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "frequency": {
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ]
+          },
+          "required": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "category": {
             "properties": {
               "id": {
                 "type": [
@@ -2197,62 +2228,6 @@
                 ]
               },
               "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "category": {
-                "properties": {
-                  "id": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "description": {
                 "type": [
                   "null",
                   "string"
@@ -2264,517 +2239,33 @@
               "object"
             ]
           },
-          "16": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "dueFromHireDate": {
-                "properties": {
-                  "unit": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "amount": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null"
-                ]
-              },
-              "description": {
-                "type": [
-                  "null"
-                ]
-              }
-            },
+          "fieldId": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
-          "17": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null"
-                ]
-              },
-              "description": {
-                "type": [
-                  "null"
-                ]
-              }
-            },
+          "linkUrl": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
-          "18": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null"
-                ]
-              },
-              "description": {
-                "type": [
-                  "null"
-                ]
-              }
-            },
+          "description": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
-          "20": {
+          "dueFromHireDate": {
             "properties": {
-              "id": {
+              "unit": {
                 "type": [
                   "null",
                   "string"
                 ]
               },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "dueFromHireDate": {
-                "properties": {
-                  "unit": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "amount": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "category": {
-                "properties": {
-                  "id": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "description": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ]
-          },
-          "15": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "dueFromHireDate": {
-                "properties": {
-                  "unit": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "amount": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null"
-                ]
-              },
-              "description": {
-                "type": [
-                  "null"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ]
-          },
-          "14": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "dueFromHireDate": {
-                "properties": {
-                  "unit": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "amount": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null"
-                ]
-              },
-              "description": {
-                "type": [
-                  "null"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ]
-          },
-          "19": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "renewable": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "frequency": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "dueFromHireDate": {
-                "properties": {
-                  "unit": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "amount": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "required": {
-                "type": [
-                  "null",
-                  "boolean"
-                ]
-              },
-              "category": {
-                "properties": {
-                  "id": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "type": [
-                      "null",
-                      "string"
-                    ]
-                  }
-                },
-                "type": [
-                  "null",
-                  "object"
-                ]
-              },
-              "fieldId": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "linkUrl": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "description": {
+              "amount": {
                 "type": [
                   "null",
                   "string"
@@ -2811,82 +2302,91 @@
         {
           "breadcrumb": [
             "properties",
-            "21"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "16"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "17"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "18"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "20"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "15"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "14"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "19"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
             "id"
           ],
           "metadata": {
             "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "renewable"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "frequency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "required"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "category"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fieldId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "linkUrl"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dueFromHireDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
           }
         }
       ]
@@ -2895,44 +2395,16 @@
       "tap_stream_id": "training_categories",
       "schema": {
         "properties": {
-          "18356": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
+          "id": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
-          "18353": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
+          "name": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -2960,28 +2432,19 @@
         {
           "breadcrumb": [
             "properties",
-            "18356"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "18353"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
             "id"
           ],
           "metadata": {
             "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
           }
         }
       ]
