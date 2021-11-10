@@ -39,15 +39,14 @@ class EmployeeDirectory(Stream):
             yield employeed      
 
 
-class Employee(Stream):
-    """Create class for stream Employee_id from source
-    that inherits from Stream class. Returns single employee id with
-    custom selected fields"""
+class Employees(Stream):
+    """Create class for stream Employees from source
+    that inherits from Stream class."""
 
     # Set variable names for stream - modify here if required
-    stream_id = "employee_id"
+    stream_id = "employees"
     key_properties = ["id"]
-    object_type = "EMPLOYEE_ID"
+    object_type = "EMPLOYEES"
     replication_method = "FULL_TABLE"
     valid_replication_keys = ["id"]
     replication_key = "id"
@@ -55,28 +54,9 @@ class Employee(Stream):
 
     # Define sync function to get stream data per line
     def sync(self, *args, **kwargs):
-        employee_id = self.client.fetch_employee_id()
-        yield employee_id
-
-
-# class AllEmployees(Stream):
-#     """Create class for stream AllEmployees from source
-#     that inherits from Stream class."""
-
-#     # Set variable names for stream - modify here if required
-#     stream_id = "employee_directory"
-#     key_properties = ["id"]
-#     object_type = "ALL_EMPLOYEES"
-#     replication_method = "FULL_TABLE"
-#     valid_replication_keys = ["id"]
-#     replication_key = "id"
-#     selected = False
-
-#     # Define sync function to get stream data per line
-#     def sync(self, *args, **kwargs):
-#         all_employees = self.client.fetch_all_employees()
-#         for employee in all_employees:
-#             yield employee
+        all_employees = self.client.fetch_all_employees()
+        for key, employee in all_employees.items():
+            yield employee
 
 
 class WhosOut(Stream):
@@ -346,7 +326,7 @@ class TrainingCategories(Stream):
 # Dictionary containing all streams available.
 STREAMS = {
     "employee_directory": EmployeeDirectory,
-    "employee" : Employee,
+    "employees" : Employees,
     "whos_out": WhosOut,
     "meta_fields": MetaFields,
     "time_off_policies": TimeOffPolicies,

@@ -28,94 +28,46 @@ class Client():
         tap_data = self._client.get_employee_directory()
         return tap_data
 
-    def fetch_employee_id(self):
-        # Retrieve json data of Employee for specified id using method get_employee()
-        tap_data = self._client.get_employee(60)
-        return tap_data
+    def fetch_all_employees(self):
+        custom_fields = {
+            "employeeNumber": "",
+            "firstName": "",
+            "lastName": "",
+            "jobTitle": "",
+            "department": "",
+            "location": "",
+            "division": "",
+            "supervisor": "",
+            "age": "",
+            "gender": "",
+            "hireDate": "",
+            "terminationDate": "",
+            "employeeStatusDate": "",
+            "employmentHistoryStatus": "",
+            "4313": "",
+            "4314": "",
+            "payRate": "",
+            "payPer": "",
+            "paySchedule": "",
+            "payChangeReason": "",
+            "4045": "",
+            "ethnicity": ""
+        }
 
-    # def fetch_all_employees(self):
-    #     self.employee_fields = {
-    #         "address1": ("text", "The employee's first address line"),
-    #         "address2": ("text", "The employee's second address line"),
-    #         "age": ("integer", "The employee's age. Not editable. To change update dateOfBirth, instead."),
-    #         "bestEmail": ("email", "The employee's work email if set, otherwise their home email"),
-    #         "birthday": ("text", "The employee's month and day of birth. Not editable. To change update dateOfBirth, instead."),
-    #         "city": ("text", "The employee's city"),
-    #         "country": ("country", "The employee's country"),
-    #         "dateOfBirth": ("date", "The date the employee was born"),
-    #         "department": ("list", "The employee's CURRENT department."),
-    #         "division": ("list", "The employee's CURRENT division"),
-    #         "eeo": ("list", "The employee's EEO job category. These are defined by the U.S. Equal Employment Opportunity Commission"),
-    #         "employeeNumber": ("text", "Employee number (assigned by your company)"),
-    #         "employmentStatus": ("status", "DEPRECATED. Please use 'status' instead. The employee's employee status (Active,Inactive)"),
-    #         "employmentHistoryStatus": ("list", "The employee's CURRENT employment status. Options are customized by account."),
-    #         "ethnicity": ("list", "The employee's ethnicity"),
-    #         "exempt": ("list", "The FLSA employee exemption code (Exempt or Non-exempt)"),
-    #         "firstName": ("text", "The employee's first name"),
-    #         "flsaCode": ("list", "The employee's FLSA code. Ie: 'Exempt', 'Non-excempt'"),
-    #         "fullName1": ("text", "Employee's first and last name. Example: John Doe. Ready only."),
-    #         "fullName2": ("text", "Employee's last and first name. Example: Doe, John. Read only."),
-    #         "fullName3": ("text", "Employee's full name with nickname. Example: Doe, John Quentin (JDog). Read only."),
-    #         "fullName4": ("text", "employee's full name without nickname. Last name first. Example: Doe, John Quentin. Read only"),
-    #         "fullName5": ("text", "employee's full name without nickname. First name first. Example: John Quentin Doe. Read only"),
-    #         "displayName": ("text", "employee's name displayed in a format configured by the user. Read only"),
-    #         "gender": ("gender", "The employee's gender. Legal values are 'Male', 'Female'"),
-    #         "hireDate": ("date", "The date the employee was hired"),
-    #         "homeEmail": ("email", "The employee's home email address"),
-    #         "homePhone": ("phone", "The employee's home phone number"),
-    #         "id": ("integer", "Employee id (automatically assigned by BambooHR). Not editable."),
-    #         "jobTitle": ("list", "The CURRENT value of the employee's job title, updating this field will create a new row in position history"),
-    #         "lastChanged": ("timestamp", "The date and time that the employee record was last changed"),
-    #         "lastName": ("text", "The employee's last name"),
-    #         "location": ("list", "The employee's CURRENT location"),
-    #         "maritalStatus": ("list", "The employee's marital status ('Single' or 'Married')"),
-    #         "middleName": ("text", "The employee's middle name"),
-    #         "mobilePhone": ("phone", "The employee's mobile phone number"),
-    #         "nickname": ("text", "The employee's nickname"),
-    #         "payChangeReason": ("list", "The reason for the employee's last pay rate change."),
-    #         "payGroup": ("list", "The custom pay group that the employee belongs to."),
-    #         "payGroupId": ("integer", "The id value corresponding to the pay group that an employee belongs to"),
-    #         "payRate": ("currency", "The employee's CURRENT pay rate. ie: $8.25"),
-    #         "payRateEffectiveDate": ("date", "The date most recent change was made."),
-    #         "payType": ("pay_type", "The employee's CURRENT pay type. ie: 'hourly','salary','commission','exception hourly','monthly','piece rate','contract','daily'"),
-    #         "preferredName": ("text", "The employee's preferred name."),
-    #         "ssn": ("ssn", "The employee's social security number"),
-    #         "sin": ("sin", "The employee's Canadian Social Insurance Number"),
-    #         "state": ("state", "The employee's state/province"),
-    #         "stateCode": ("text", "The 2 character abbreviation for the employee's state (US only). Not editable."),
-    #         "status": ("status", "'status' indicates whether you are using BambooHR to track data about this employee. Valid values are 'Active', 'Inactive'."),
-    #         "supervisor": ("employee", "The emloyee’s CURRENT supervisor. Not editable."),
-    #         "supervisorId": ("integer", "The 'employeeNumber' of the employee's CURRENT supervisor. Not editable."),
-    #         "supervisorEId": ("integer", "The 'id' of the employee's CURRENT supervisor. Not editable."),
-    #         "terminationDate": ("date", "The date the employee was terminated"),
-    #         "workEmail": ("email", "The employee's work email address"),
-    #         "workPhone": ("phone", "The employee's work phone number, without extension"),
-    #         "workPhonePlusExtension": ("text", "The employee's work phone and extension. Not editable."),
-    #         "workPhoneExtension": ("text", "The employees work phone extension (if any)"),
-    #         "zipcode": ("text", "The employee's zipcode"),
-    #         "photoUploaded": ("bool", "The employee has uploaded a photo"),
-    #         "isPhotoUploaded": ("bool", "The employee has uploaded a photo"),
-    #         "rehireDate": ("date", "The date the employee was rehired"),
-    #         "adpCompanyCode": ("list", ""),
-    #         "adpFileNumber": ("text", ""),
-    #         "standardHoursPerWeek": ("integer", ""),
-    #         "earningsDate": ("date", ""),
-    #         "earningsPriorYear": ("currency", ""),
-    #         "bonusDate": ("date", ""),
-    #         "bonusAmount": ("currency", ""),
-    #         "bonusReason": ("list", ""),
-    #         "bonusComment": ("text", ""),
-    #         "commisionDate": ("date", ""),
-    #         "commissionAmount": ("currency", ""),
-    #         "commissionComment": ("text", ""),
-    #         "commissionComment": ("text", ""),
-    #         "benefitClassDate": ("date", ""),
-    #         "benefitClassClass": ("list", ""),
-    #         "benefitClassChangeReason": ("list", ""),
-    #     }
-    #     # Retrieve json data of all Employees with selected fields using method get_all_employees()
-    #     tap_data = self._client.get_all_employees(field_list=self.employee_fields)
-    #     return tap_data
+        add_fields = {
+            "employeeStatusDate": ("date", "The date the employee was hired"),
+            "4313": ("text", "Termination type of employee"),
+            "4314": ("text", "Termination reason of employee"),
+            "payPer": ("text", "Pay per time"),
+            "paySchedule": ("text", "Pay schedule of employee, frequency"),
+            "4045": ("text", "Employee compensation comments")
+        }
+
+        self._client.employee_fields.update(add_fields)
+        
+        # Retrieve json data of all Employees with selected fields using method get_all_employees()
+        tap_data = self._client.get_all_employees(field_list=custom_fields, disabledUsers=True, reloadEmployees=True)
+        return tap_data
 
     def fetch_whos_out(self):
         # Retrieve json data of Whos Out using method get_whos_out()

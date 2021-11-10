@@ -328,9 +328,152 @@
       ]
     },
     {
-      "tap_stream_id": "employee",
-      "schema": {},
-      "stream": "employee",
+      "tap_stream_id": "employees",
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "employeeNumber": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "jobTitle": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "department": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "location": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "division": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "supervisor": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "age": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gender": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "hireDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "terminationDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "employeeStatusDate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "employmentHistoryStatus": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "4313": {
+            "type": [
+              "null"
+            ]
+          },
+          "4314": {
+            "type": [
+              "null"
+            ]
+          },
+          "payRate": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payPer": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "paySchedule": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payChangeReason": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "4045": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ethnicity": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "employees",
       "metadata": [
         {
           "breadcrumb": [],
@@ -339,6 +482,7 @@
               "id"
             ],
             "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
             "valid-replication-keys": [
               "id"
             ],
@@ -352,6 +496,204 @@
           ],
           "metadata": {
             "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "employeeNumber"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "firstName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "jobTitle"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "department"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "location"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "division"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "supervisor"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "age"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gender"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "hireDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "terminationDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "employeeStatusDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "employmentHistoryStatus"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "4313"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "4314"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payRate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payPer"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "paySchedule"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payChangeReason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "4045"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ethnicity"
+          ],
+          "metadata": {
+            "inclusion": "available"
           }
         }
       ]
@@ -528,7 +870,7 @@
             "valid-replication-keys": [
               "id"
             ],
-            "selected": true
+            "selected": false
           }
         },
         {

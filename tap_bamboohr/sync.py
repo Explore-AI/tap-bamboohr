@@ -29,7 +29,7 @@ def sync(config, state, catalog):
             stream_schema = stream.schema.to_dict()
             stream_metadata = metadata.to_map(stream.metadata)
 
-            LOGGER.info("Syncing stream:" + stream.tap_stream_id)
+            LOGGER.info("Syncing stream: " + stream.tap_stream_id)
 
             # Get info from state.json file and write state message - as stdout
             state = singer.set_currently_syncing(state, tap_stream_id)
