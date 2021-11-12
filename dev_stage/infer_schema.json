@@ -7,137 +7,32 @@
     "id": {
       "type": [
         "null",
-        "string"
+        "string",
+        "integer"
       ]
     },
-    "employeeNumber": {
+    "name": {
       "type": [
         "null",
         "string"
       ]
     },
-    "firstName": {
+    "type": {
       "type": [
         "null",
         "string"
       ]
     },
-    "lastName": {
+    "alias": {
       "type": [
         "null",
         "string"
       ]
     },
-    "jobTitle": {
+    "deprecated": {
       "type": [
         "null",
-        "string"
-      ]
-    },
-    "department": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "location": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "division": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "supervisor": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "age": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "gender": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "hireDate": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "terminationDate": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "employeeStatusDate": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "employmentHistoryStatus": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "4313": {
-      "type": [
-        "null"
-      ]
-    },
-    "4314": {
-      "type": [
-        "null"
-      ]
-    },
-    "payRate": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "payPer": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "paySchedule": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "payChangeReason": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "4045": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "ethnicity": {
-      "type": [
-        "null",
-        "string"
+        "boolean"
       ]
     }
   }

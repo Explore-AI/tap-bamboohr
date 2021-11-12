@@ -421,16 +421,6 @@
               "string"
             ]
           },
-          "4313": {
-            "type": [
-              "null"
-            ]
-          },
-          "4314": {
-            "type": [
-              "null"
-            ]
-          },
           "payRate": {
             "type": [
               "null",
@@ -455,13 +445,23 @@
               "string"
             ]
           },
-          "4045": {
+          "ethnicity": {
             "type": [
               "null",
               "string"
             ]
           },
-          "ethnicity": {
+          "Termination_Type_4313": {
+            "type": [
+              "null"
+            ]
+          },
+          "Termination_Reason_4314": {
+            "type": [
+              "null"
+            ]
+          },
+          "Compensation_Comments_4045": {
             "type": [
               "null",
               "string"
@@ -627,24 +627,6 @@
         {
           "breadcrumb": [
             "properties",
-            "4313"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "4314"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
             "payRate"
           ],
           "metadata": {
@@ -681,7 +663,7 @@
         {
           "breadcrumb": [
             "properties",
-            "4045"
+            "ethnicity"
           ],
           "metadata": {
             "inclusion": "available"
@@ -690,7 +672,25 @@
         {
           "breadcrumb": [
             "properties",
-            "ethnicity"
+            "Termination_Type_4313"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Termination_Reason_4314"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Compensation_Comments_4045"
           ],
           "metadata": {
             "inclusion": "available"
@@ -823,8 +823,7 @@
           "id": {
             "type": [
               "null",
-              "string",
-              "integer"
+              "string"
             ]
           },
           "name": {

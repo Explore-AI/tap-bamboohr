@@ -56,6 +56,12 @@ class Employees(Stream):
     def sync(self, *args, **kwargs):
         all_employees = self.client.fetch_all_employees()
         for key, employee in all_employees.items():
+            if "4313" in employee:
+                employee["Termination_Type_4313"] = employee.pop("4313")
+            if "4314" in employee:
+                employee["Termination_Reason_4314"] = employee.pop("4314")
+            if "4045" in employee:
+                employee["Compensation_Comments_4045"] = employee.pop("4045")
             yield employee
 
 
