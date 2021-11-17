@@ -12,10 +12,10 @@ setup(
     install_requires=[
         # NB: Pin these to a more specific version for tap reliability
         # Added wheel
-        "wheel",
-        "singer-python",
-        "requests",
-        "PyBambooHR"
+        "wheel==0.37.0",
+        "singer-python==5.12.2",
+        "requests==2.26.0",
+        "PyBambooHR==0.8.1"
     ],
     entry_points="""
     [console_scripts]
