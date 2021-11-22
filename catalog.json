@@ -1028,8 +1028,7 @@
           "id": {
             "type": [
               "null",
-              "string",
-              "integer"
+              "string"
             ]
           },
           "deductionTypeName": {
